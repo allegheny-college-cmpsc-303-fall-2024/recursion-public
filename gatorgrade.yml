@@ -1,0 +1,56 @@
+- description: Problem 1, prints correct sum of digits
+  check: MatchCommandFragment
+  options:
+    fragment: 6
+    command: python -c 'import problems.problem1 as p; print(p.sum_digits(123))'
+    count: 1
+  checkmark: problem-1
+- description: Problem 2, prints correct Cantor pattern
+  check: MatchCommandFragment
+  options:
+    fragment: '                   -'
+    command: python3 ./problems/problem2.py
+    count: 1
+  checkmark: problem-2
+- description: Problem 3, checks if is_even returns correct result
+  check: MatchCommandFragment
+  options:
+    fragment: "True"
+    command: python3 ./problems/problem3.py
+    count: 1
+  checkmark: problem-3
+- description: Problem 4, prints correct factorial of 5
+  check: MatchCommandFragment
+  options:
+    fragment: "120"
+    command: python3 ./problems/problem4.py
+    count: 1
+  checkmark: problem-4
+- description: Problem 5, prints correct Fibonacci sequence
+  check: MatchCommandFragment
+  options:
+    fragment: "0\n1\n1\n2\n3\n5\n8\n13\n21"
+    command: python3 ./problems/problem5.py
+    count: 1
+  checkmark: problem-5
+- description: Problem 6, generates correct subsequences for 'abc'
+  check: MatchCommandFragment
+  options:
+    fragment: "['', 'c', 'b', 'bc', 'a', 'ac', 'ab', 'abc']"
+    command: python3 ./problems/problem6.py
+    count: 1
+  checkmark: problem-6
+- description: Problem 7, prints correct ASCII branch pattern
+  check: MatchCommandFragment
+  options:
+    fragment: '\/  \/  \/  \/  \/  \/  \/  \/'
+    command: python3 ./problems/problem7.py
+    count: 1
+  checkmark: problem-7
+- description: Problem 8, returns correct greatest common divisor
+  check: MatchCommandFragment
+  options:
+    fragment: "2"
+    command: python3 ./problems/problem8.py
+    count: 1
+

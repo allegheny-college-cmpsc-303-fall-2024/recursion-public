@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Report Grade Results
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "grade" , "main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# {owner}/{repo}/.github/workflows/{filename}@{ref}
+# does the build run in the other repo?
+jobs:
+  gatorgrade-to-firestore:
+    uses: allegheny-college-cmpsc-303-fall-2024/grading/.github/workflows/gg-report.yml@main
+    secrets: inherit
+    with:
+      assignment: 'recursion'
+      category: 'challenges'
+      gg-in-caller: true
+      min-pass: 6 # minimum number of tests that must pass to receive 'complete'
